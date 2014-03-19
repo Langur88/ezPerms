@@ -5,6 +5,8 @@ import java.util.Arrays;
 
 import me.Langur.ezPermissions.commands.GroupCmd;
 import me.Langur.ezPermissions.commands.PermissionsCommand;
+import me.Langur.ezPermissions.commands.TestCmd;
+import me.Langur.ezPermissions.commands.UserCmd;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;

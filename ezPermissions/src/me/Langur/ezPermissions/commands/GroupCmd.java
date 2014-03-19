@@ -17,12 +17,12 @@ public class GroupCmd extends PermissionsCommand {
 		
 		if(args.length < 2) {
 			if(SettingsManager.getInstance().getGroup(g) != null) {
-				if(SettingsManager.getInstance().getGroup(g).getPermissions.size() == 0) {
+				if(SettingsManager.getInstance().getGroup(g).getPermissions().size() == 0) {
 					sender.sendMessage(ChatColor.YELLOW + "No permissions for " + g + ".");
 					return;
 				}
 				
-				for(String permission : SettingsManager.getInstance().getGroup(g).getPermissions) {
+				for(String permission : SettingsManager.getInstance().getGroup(g).getPermissions()) {
 					sender.sendMessage(ChatColor.YELLOW + permission);
 					return;
 				}
@@ -45,7 +45,7 @@ public class GroupCmd extends PermissionsCommand {
 				sender.sendMessage(ChatColor.GREEN + "Added " + args[2] + " to group " + g + ".");
 				return;
 			}else if(args[1].equalsIgnoreCase("removeperm")) {
-				SettingsManager.getInstance()args.getGroup(g).removePermission(args[2]);
+				SettingsManager.getInstance().getGroup(g).removePermission(args[2]);
 				sender.sendMessage(ChatColor.GREEN + "Removed " + args[2] + " from group " + g + ".");
 				return;
 			}
